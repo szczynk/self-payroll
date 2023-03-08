@@ -3,9 +3,10 @@ package usecase
 import (
 	"context"
 	"errors"
-	"gorm.io/gorm"
 	"self-payrol/model"
 	"self-payrol/request"
+
+	"gorm.io/gorm"
 )
 
 type userUsecase struct {

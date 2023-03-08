@@ -1,8 +1,9 @@
 package helper
 
 import (
-	"github.com/labstack/echo/v4"
 	"net/http"
+
+	"github.com/labstack/echo/v4"
 )
 
 type (
@@ -16,11 +17,6 @@ type (
 		Success bool        `json:"success"`
 		Message string      `json:"message"`
 		Error   interface{} `json:"error"`
-	}
-
-	successDeleteJson struct {
-		Message string `json:"message"`
-		Success bool   `json:"success"`
 	}
 
 	ErrorWithCode struct {
@@ -58,7 +54,6 @@ func ResponseErrorJson(c echo.Context, code int, err error) error {
 	res := errorJson{
 		Error: err.Error(),
 	}
-	c.JSON(code, res)
 
-	return err
+	return c.JSON(code, res)
 }

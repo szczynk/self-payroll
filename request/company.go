@@ -14,7 +14,17 @@ type (
 	}
 )
 
-// TODO: tuliskan validasi untuk CompanyRequest dengan rule semua field required
+// TODO(Rakamin): tuliskan validasi untuk CompanyRequest dengan rule semua field required
+func (req CompanyRequest) Validate() error {
+	return validation.ValidateStruct(
+		&req,
+		validation.Field(&req.Name, validation.Required),
+		validation.Field(&req.Balance, validation.Required),
+		validation.Field(&req.Address, validation.Required),
+	)
+}
+
+//EOL
 
 func (req TopupCompanyBalance) Validate() error {
 	return validation.ValidateStruct(

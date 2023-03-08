@@ -1,11 +1,12 @@
 package postgres
 
 import (
+	"os"
+	"self-payrol/model"
+
 	"github.com/rs/zerolog/log"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
-	"os"
-	"self-payrol/model"
 )
 
 func InitGorm() *gorm.DB {
@@ -16,7 +17,15 @@ func InitGorm() *gorm.DB {
 	if err != nil {
 		log.Error().Msgf("cant connect to database %s", err)
 	}
-	db.AutoMigrate(&model.Position{}, &model.User{}, &model.Company{}, &model.Transaction{})
+
+	if err := db.AutoMigrate(
+		&model.Position{},
+		&model.User{},
+		&model.Company{},
+		&model.Transaction{},
+	); err != nil {
+		log.Fatal().Msgf("cant automigrate %s", err)
+	}
 
 	return db
 
