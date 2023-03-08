@@ -18,10 +18,10 @@ The following features are included in the system:
 
 The following tools were used to build this project:
 
-- Echo Framework
-- PostgreSQL as database
-- GORM as ORM
-- ozzo-validation as input validation
+- [Echo Framework](https://github.com/labstack/echo)
+- [PostgreSQL](https://www.postgresql.org/) as database
+- [GORM](https://gorm.io/) as ORM
+- [ozzo-validation](https://github.com/go-ozzo/ozzo-validation) as input validation
 
 ## Getting Started
 
@@ -36,26 +36,22 @@ To run the application, follow the instructions below:
 1. Create a `.env` file by running `cp .env.example .env`. Then fill in the `.env` file according to your local environment.
 
    ```bash
-     cp .env.example .env
+   cp .env.example .env
    ```
 
 1. Run `go mod tidy && go mod vendor`.
 
    ```bash
-     go mod tidy && go mod vendor
+   go mod tidy && go mod vendor
    ```
 
 1. Run `go run *.go`.
 
    ```bash
-     go run *.go
+   go run *.go
    ```
 
 The list of endpoints is available in the [documenter](https://documenter.getpostman.com/view/4080490/2s83Ychhk4).
-
-## Technologies Used
-
-- Go programming language
 
 ## Contributing
 
