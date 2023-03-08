@@ -1,19 +1,32 @@
-# Self payroll System
+# Self Payroll System
 
-Fitur utama dari web service ini adalah employee dapat melakukan penarikan gaji secara mandiri setiap bulannya.
+This is a web service that allows employees to withdraw their salaries independently every month. The system includes the following features:
 
-Lebih detail nya, fitur yang harus dikerjakan adalah:
+1. Position Management: CRUD operations (Create, Read, Update, Delete) to manage position data.
+2. Employee Management: CRUD operations (Create, Read, Update, Delete) to manage employee data.
+3. Admin Balance Top-up: Admin can top up the company balance.
+4. Salary Withdrawals: Employees can withdraw their salaries by providing their Employee ID and Secret ID. The salary amount is based on the position held by each employee.
+5. Transaction History: Transaction history of top-ups and reductions of the company's balance.
 
-1. Melakukan manage data jabatan berupa operasi CRUD (create, read, update, delete)
-2. Melakukan manage data employee berupa operasi CRUD (Create, Read, Update, Delete)
-3. Admin dapat melakukan topup balance perusahaan
-4. Melakukan penarikan sallary dengan menyertakan employee ID dan secret ID, besaran salary berdasarkan jabatan yang dimiliki oleh tiap employee
-5. Terdapat riwayat topup dan pengurangan balance perusahaan
+## Getting Started
 
-Untuk menjalankan aplikasi lakukan perintah berikut
+To run the application, follow the instructions below:
 
-1. `cp .env.example .env` dan isi sesuai dengan environtment yang ada di PC kalian
-2. `go mod tudy && go mod vendor`
-3. `go run *.go`
+1. Clone this repository and navigate to the project directory.
+2. Create a `.env` file by running `cp .env.example .env`. Then fill in the `.env` file according to your local environment.
+3. Run `go mod tidy && go mod vendor`.
+4. Run `go run *.go`.
 
-Daftar endpoint ada di postman documenter yang [disertakan](https://documenter.getpostman.com/view/4080490/2s83Ychhk4)
+The list of endpoints is available in the [documenter](https://documenter.getpostman.com/view/4080490/2s83Ychhk4).
+
+## Technologies Used
+
+- Go programming language
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
